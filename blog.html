@@ -1,0 +1,167 @@
+!<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        min-height: 100vh;
+        background-image: url(night.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    nav{
+        background-color: rgb(165, 40, 163);
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul{
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav li{
+        height: 50px;
+    }
+
+    nav a{
+        height: 100%;
+        padding: 0 30px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: rgb(240, 223, 223);
+    }
+    nav a:hover{
+        background-color: #524f4f9e;
+        filter: drop-shadow(5px 5px 10px red, -5px -10px 10px rgb(152, 223, 243));
+    }
+
+    nav li:first-child{
+        margin-right: auto;
+    }
+
+    .sidebar{
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 250px;
+        z-index: 999;
+        background-color: rgba(10, 216, 227, 0.107);
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .sidebar li{
+        width: 100%;
+    }
+
+    .sidebar a{
+        width: 100%;
+    }
+    @media(max-width:800px){
+        
+    }
+h1{
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-bottom:10px;
+    align-items: flex-start;
+    color: white;
+    backdrop-filter: blur(10px);
+}
+h2{
+    color: white;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    backdrop-filter: blur(10px);
+}
+
+p{
+    color: rgb(145, 172, 174);
+    margin-left: 20px;
+    height: 200px;
+    width: 500px;
+    overflow: scroll;
+    backdrop-filter: blur(10px);
+}
+h2:hover{
+    filter: drop-shadow(5px 5px 5px white); 
+}
+
+img{
+    margin-top: ;
+    display: block;
+    margin: 20px 20px 20px;
+    border: 0px solid;
+    border-radius: 50%;
+}
+
+img:hover{
+    filter: drop-shadow(10px 10px 20px rgb(0, 42, 255));
+}
+
+</style>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="white"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">Login</a></li>
+        </ul>
+        <ul>
+            <li><a href="#">Coding</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Forum</a></li>
+            <li><a href="#">Login</a></li>
+            <li onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="white"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+        </ul>
+    </nav>
+    <h1>This in a blog</h1>
+    <img src="abhi.jpg" alt="Abhishek Kumar verma" height="250px" width="250px">
+    <h2>Varanasi 80 Ghat</h2>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi labore adipisci quo! Aliquid quisquam magni expedita unde architecto totam accusantium cumque blanditiis saepe vel error, mollitia a tempore voluptatum deleniti!
+        Ab repudiandae ducimus a officiis labore minus at ipsa omnis. Quis maiores, dolor ullam minima tenetur numquam cum beatae qui totam eos expedita! Blanditiis voluptate distinctio veniam, eaque cumque mollitia.
+        Omnis amet, sapiente maxime nisi vitae ex repellendus officiis impedit modi obcaecati officia quisquam ratione atque quae tenetur. Molestias quisquam, nostrum non officia ducimus reprehenderit vero aut blanditiis excepturi autem!
+        Nostrum voluptatibus tempore dicta, optio magni aliquam fugiat laboriosam, omnis, quisquam possimus nulla officiis fuga adipisci est? Sunt, quo, dolor atque tempore nulla ullam blanditiis possimus non dicta, quod modi.
+        Doloremque aut assumenda iusto, unde sequi, est ab possimus sapiente accusantium repellat quaerat recusandae vel eaque quibusdam quas fuga quis sunt magni ex rerum, sint reprehenderit. Fugit aspernatur nulla architecto?
+    </p>
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+        }
+    </script>
+</body>
+</html>
+
